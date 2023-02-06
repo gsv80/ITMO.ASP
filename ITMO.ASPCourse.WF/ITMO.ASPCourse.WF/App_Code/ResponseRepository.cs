@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace ITMO.ASPCourse.WF.App_Code
+namespace ITMO.ASPCourse.WF
 {
     
     public class ResponseRepository

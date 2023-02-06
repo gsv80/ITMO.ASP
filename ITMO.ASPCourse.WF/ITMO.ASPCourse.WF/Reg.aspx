@@ -1,4 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="ITMO.ASPCourse.WF.Reg" %>
+﻿
+<%@ Import Namespace="ITMO.ASPCourse.WF" %>
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="ITMO.ASPCourse.WF.Reg" %>
+
 
 <!DOCTYPE html>
 
