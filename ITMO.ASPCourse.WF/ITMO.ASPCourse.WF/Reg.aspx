@@ -1,5 +1,5 @@
 ﻿
-<%@ Import Namespace="ITMO.ASPCourse.WF" %>
+<%@ Import namespace="ITMO.ASPCourse.WF" %>
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="ITMO.ASPCourse.WF.Reg" %>
 

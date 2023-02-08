@@ -1,11 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Start.aspx.cs" Inherits="ITMO.ASPCourse.WF.Start" %>
 
+<%@ import namespace="" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Start</title>
-    <link href="Styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Styles.css"  />
      <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
