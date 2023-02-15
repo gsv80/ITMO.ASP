@@ -1,0 +1,15 @@
+﻿@model WebMVCR1_L4.Models.Person
+
+@{
+    //Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "WelcomePage";
+}
+
+
+    <div>
+        <h1>Здравствуйте, @Model.ToString()!</h1>
+        <p>
+            @Html.ActionLink("На главную", "Index")
+        </p>
+    </div>
+

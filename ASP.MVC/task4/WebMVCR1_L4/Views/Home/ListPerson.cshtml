@@ -1,0 +1,23 @@
+﻿@model WebMVCR1_L4.Models.PersonRepository
+
+@{
+    //Layout = "~/Views/_BasicLayout.cshtml";
+    ViewBag.Title = "ParticipantsList";
+}
+
+
+    <div>
+        <h3>Список участников</h3>
+        <p> Персон всего @ViewBag.Count</p>
+        <ul>
+            @foreach (var c in ViewBag.Persons)
+            {
+                <li>@c.ToString()</li>
+            }
+
+        </ul>
+        <p>
+            @Html.ActionLink("На главную", "Index")
+        </p>
+    </div>
+
