@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="RSVP_L5.Reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Reg.aspx.cs" Inherits="RSVP_L5.Reg" UnobtrusiveValidationMode="None" %>
 
 <!DOCTYPE html>
 
@@ -31,6 +31,13 @@
                     ForeColor="Red"> 
                         Не оставляйте пустым
                 </asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator runat="server" ControlToValidate="email"
+                    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                    ErrorMessage="E-mail is not in a valid format" 
+                    Display="Dynamic"
+                    ForeColor="Red">
+                        Адрес введен неверно!!!
+                </asp:RegularExpressionValidator>
 
             </div>
             <div>
@@ -38,7 +45,7 @@
                 <asp:TextBox ID="phone" runat="server"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                     ErrorMessage="Заполните поле 'Телефон'" 
-                    ControlToValidate="email" 
+                    ControlToValidate="phone" 
                     ForeColor="Red"> 
                         Не оставляйте пустым
                 </asp:RequiredFieldValidator>
@@ -46,6 +53,9 @@
             <div>
                  <label>Вы будете делать доклад?</label>
                  <asp:CheckBox ID="CheckBoxYN" runat="server" />
+            </div>
+            <div>
+                <asp:ValidationSummary ID="validationSummary" runat="server" ShowModelStateErrors="true" />
             </div>
             <div>
                 <button type="submit">Отправить ответ на приглашение RSVP </button>

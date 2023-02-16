@@ -13,17 +13,24 @@ namespace RSVP_L5
         {
             if (IsPostBack)
             {
-                GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
-                ResponseRepository.GetRepository().AddResponse(rsvp);
-
-                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
-                {
-                    Response.Redirect("seeyouthere.html");
-                }
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
                 else
                 {
-                    Response.Redirect("sorryyoucantcome.html");
+                    GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+                    ResponseRepository.GetRepository().AddResponse(rsvp);
+
+                    if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
+                    {
+                        Response.Redirect("seeyouthere.html");
+                    }
+                    else
+                    {
+                        Response.Redirect("sorryyoucantcome.html");
+                    }
                 }
+                
             }
         }
     }
