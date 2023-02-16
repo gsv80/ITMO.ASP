@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RSVP_L4.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RSVP_L5.Site" %>
 
 <!DOCTYPE html>
 
@@ -6,8 +6,7 @@
 <head runat="server">
     <title>RSVP</title>
     <link href="Style.css" rel="stylesheet" />
-    <%--<asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>--%>
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -27,7 +26,7 @@
                                 <Items>
                                     <asp:MenuItem NavigateUrl="~/Start.aspx" Text="Главная"/>
                                      <asp:MenuItem NavigateUrl="~/Reg.aspx" Text="Регистрация"/>
-                                     <asp:MenuItem NavigateUrl="~/Summary_Partial.aspx" Text="Отчет о регистрациях"/>
+                                     <asp:MenuItem NavigateUrl="~/Summary.aspx" Text="Отчет о регистрациях"/>
                                     <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности"/>
 
                                 </Items>   
@@ -46,7 +45,7 @@
                             <ul class="footer_menu">
                                 <li><a href="Start.aspx">Главная</a></li>
                                 <li><a href="Reg.aspx">Регистрация</a></li>
-                                <li><a href="Summary_Partial.aspx">Отчет о регистрациях</a></li>
+                                <li><a href="Summary.aspx">Отчет о регистрациях</a></li>
                                 <li><a href="About.aspx">Подробности</a></li>
                             </ul>
 
