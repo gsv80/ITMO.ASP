@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Style.css")" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <ul class="menu__header">
+            <li><a href="#">content</a></li>
+        </ul>
+        <h2>Студенты и оценки </h2>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <h5>2023.Курс ИТМО ASP.NET (MVC). GORBANEV (TM).</h5>
+    </div>
+</body>
+</html>
