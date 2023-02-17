@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace ASP.ExamTask.Controllers
 {
     public class HomeController : Controller
@@ -13,5 +14,19 @@ namespace ASP.ExamTask.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ViewResult InputData()
+        {
+            return View();   
+        }
+
+        [HttpPost]
+        public ViewResult InputData(Students s)
+        {
+            return View("Table", s);
+        }
+
+
     }
 }

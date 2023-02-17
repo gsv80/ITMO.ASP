@@ -1,3 +1,10 @@
 ﻿body {
     background-color:antiquewhite;
 }
+
+.header li {
+    display: inline;
+    border-right: 1px solid #000000;
+    list-style-type: none;
+    padding: 0 20px;
+}

@@ -9,7 +9,9 @@
 <body>
     <div class="header">
         <ul class="menu__header">
-            <li><a href="#">content</a></li>
+            <li>@Html.ActionLink("На главную", "Index")</li>
+            <li>@Html.ActionLink("Табель студентов", "Table")</li>
+            <li>@Html.ActionLink("Добавить", "InputData")</li>
         </ul>
         <h2>Студенты и оценки </h2>
     </div>
@@ -17,7 +19,8 @@
         @RenderBody()
     </div>
     <div class="footer">
-        <h5>2023.Курс ИТМО ASP.NET (MVC). GORBANEV (TM).</h5>
+        <h5>2023.Курс ИТМО ASP.NET (MVC). 124-28. GORBANEV (TM). <a href="https://github.com/gsv80/ITMO.ASP/">github</a></h5>
+   
     </div>
 </body>
 </html>
