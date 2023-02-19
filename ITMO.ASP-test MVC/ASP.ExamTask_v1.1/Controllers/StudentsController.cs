@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ASP.ExamTask_v1._1.Context;
+using ASP.ExamTask_v1._1.Models;
 
 namespace ASP.ExamTask_v1._1.Controllers
 {
@@ -26,10 +27,18 @@ namespace ASP.ExamTask_v1._1.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateGrade(Grades gr)
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateGrade(Grade gr)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                db.Grades.Add(gr);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(gr);     
         }
+            
 
         // GET: Students/Details/5
         public ActionResult Details(int id)
