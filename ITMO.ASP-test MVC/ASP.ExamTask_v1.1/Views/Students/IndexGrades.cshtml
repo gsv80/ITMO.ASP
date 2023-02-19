@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ASP.ExamTask_v1._1.Models.Grade>
+
+@{
+    ViewBag.Title = "Система баллов";
+}
+
+<h2>IndexGrades</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "CreateGrade")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Описание
+        </th>
+        <th>
+            Оценка/Баллы
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradeDescr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GradeValue)
+        </td>
+        
+    </tr>
+}
+
+</table>

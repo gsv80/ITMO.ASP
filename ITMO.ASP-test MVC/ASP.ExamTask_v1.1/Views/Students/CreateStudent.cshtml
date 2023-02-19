@@ -36,7 +36,7 @@
         <p>Баллы/Оценка</p>
         <div class="col-md-10">
             @Html.EditorFor(model => model.Grade.GradeValue, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Grade.GradeValue, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.Grade.GradeValue, "Пятибальная система от 2 до 5 баллов", new { @class = "text-danger" })
         </div>
     </div>
     <br />

@@ -12,6 +12,7 @@ namespace ASP.ExamTask_v1._1.Models
         public string GradeDescr { get; set; }
 
         [Required]
+        
         public int GradeValue { get; set; }
 
         public virtual ICollection<Student> Students { get; set; }

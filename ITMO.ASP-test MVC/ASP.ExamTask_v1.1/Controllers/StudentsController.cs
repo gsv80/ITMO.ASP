@@ -20,6 +20,12 @@ namespace ASP.ExamTask_v1._1.Controllers
             return View(db.Students.ToList());
         }
 
+        // GET: Grades
+        public ActionResult IndexGrades()
+        {
+            return View(db.Grades.ToList());
+        }
+
         [HttpGet]
         public ActionResult CreateGrade()
         {

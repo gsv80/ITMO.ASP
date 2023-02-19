@@ -1,21 +1,24 @@
-﻿@model ASP.ExamTask_v1._1.Models.Grade
-
+﻿
+@model ASP.ExamTask_v1._1.Models.Grade
 @{
-    ViewBag.Title = "Добавить оценки в систему баллов";
+    ViewBag.Title = "Система баллов";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm()) 
+
+
+
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4></h4>
         <hr />
         @Html.ValidationSummary(true, "Данные  введены некорректно", new { @class = "text-danger" })
         <div class="form-group">
-            
+
             <p>Наименование оценки/балла</p>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.GradeDescr, new { htmlAttributes = new { @class = "form-control" } })
@@ -38,5 +41,5 @@
             </div>
         </div>
     </div>
-    
+
 }

@@ -118,6 +118,7 @@
     <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\Students\CreateGrade.cshtml" />
     <Content Include="Views\Students\CreateStudent.cshtml" />
+    <Content Include="Views\Students\IndexGrades.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
