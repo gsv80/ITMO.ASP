@@ -7,3 +7,13 @@
 .header_menu li:last-child {
     border: none;
     }
+
+table, th, td {
+    /*padding: 0 10px;*/
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}

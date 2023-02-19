@@ -38,7 +38,26 @@ namespace ASP.ExamTask_v1._1.Controllers
             }
             return View(gr);     
         }
-            
+
+
+        [HttpGet]
+        public ActionResult CreateStudent()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateStudent(Student st)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Students.Add(st);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(st);
+        }
 
         // GET: Students/Details/5
         public ActionResult Details(int id)
