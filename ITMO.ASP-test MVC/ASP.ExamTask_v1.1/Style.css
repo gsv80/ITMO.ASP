@@ -1,0 +1,9 @@
+﻿.header_menu li{
+    display: inline;
+    padding: 0 30px;
+    border-right: solid black 2px;
+}
+
+.header_menu li:last-child {
+    border: none;
+    }

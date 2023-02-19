@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASP.ExamTask.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,9 +23,21 @@ namespace ASP.ExamTask.Controllers
         }
 
         [HttpPost]
-        public ViewResult InputData(Students s)
+        public ViewResult InputData(Student s)
         {
-            return View("Table", s);
+            try{
+                    SchoolContext ctx = new SchoolContext();
+                
+                    ctx.Students.Add(s);
+                    ctx.SaveChanges();
+                
+
+            }
+            catch (Exception e)
+            {
+                Response.Redirect("Table" + e.Message);
+            }
+                return View("Table", s);
         }
 
 

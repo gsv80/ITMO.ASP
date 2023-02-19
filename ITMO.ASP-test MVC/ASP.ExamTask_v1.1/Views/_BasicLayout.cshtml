@@ -1,0 +1,30 @@
+﻿@using System.Web
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <ul class="header_menu">
+            <li>@Html.ActionLink("К началу", "Index", "Home")</li>
+            <li>2</li>
+            <li>3</li>
+            <li>@Html.ActionLink("Система баллов", "CreateGrade", "Students")</li>
+            <li>@Html.ActionLink("О Портале", "About", "Home")</li>
+        </ul>
+    </div>
+    <h2>@ViewBag.Message</h2>
+    <div>
+        @RenderBody()
+    </div>
+    <div class="footer">
+        @Html.ActionLink("На Главную", "Index", "Home")
+    </div>
+</body>
+</html>
