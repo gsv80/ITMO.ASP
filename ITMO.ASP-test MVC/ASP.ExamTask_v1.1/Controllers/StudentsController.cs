@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ASP.ExamTask_v1._1.Context;
@@ -113,25 +114,30 @@ namespace ASP.ExamTask_v1._1.Controllers
         }
 
         // GET: Students/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            if(id == 0)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Student st = db.Students.Find(id);
+            if( st == null)
+            {
+                return HttpNotFound();
+            }
+            return View(st);
         }
 
         // POST: Students/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            Student st = db.Students.Find(id);
+            db.Students.Remove(st);
+            db.SaveChanges();
+            return RedirectToAction("Index");
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }

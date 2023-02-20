@@ -103,6 +103,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302202138252_GradeRange.cs" />
+    <Compile Include="Migrations\202302202138252_GradeRange.Designer.cs">
+      <DependentUpon>202302202138252_GradeRange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Grade.cs" />
     <Compile Include="Models\Student.cs" />
@@ -119,6 +123,7 @@
     <Content Include="Views\Students\CreateGrade.cshtml" />
     <Content Include="Views\Students\CreateStudent.cshtml" />
     <Content Include="Views\Students\IndexGrades.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,6 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202302202138252_GradeRange.resx">
+      <DependentUpon>202302202138252_GradeRange.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
